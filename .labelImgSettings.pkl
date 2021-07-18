@@ -1,0 +1,6 @@
+¾      }(filename window/sizesip_unpickle_typePyQt5.QtCoreQSizeMXM􁆔Rwindow/positionhhQPointK3K-Rwindow/statehh
+QByteArrayC³   ÿ    ý          ˼   û    L a b e l s        ꠿ÿÿû   
+ F i l e s  4   ¬   _ ÿÿÿ   젠ˠ           ü              T o o l s T o o l B a r    ÿÿÿÿ        R
+line/colorhPyQt5.QtGuiQColor(K KÿK KtR
+fill/colorhhQColor(KÿK K KtRrecentFiles](BC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2528.JPGBC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2529.JPGBC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2533.JPGBC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2535.JPGBC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2536.JPGBC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2537.JPGBC:\tensorflow1\labelImg\[PATH_TO_IMAGES_FOLDER]\train\IMG_2538.JPGeadvancedsavedir5C:/tensorflow1/labelImg/[PATH_TO_IMAGES_FOLDER]/trainlastOpenDir5C:/tensorflow1/labelImg/[PATH_TO_IMAGES_FOLDER]/trainautosavesingleclass
+paintlabeldraw/squarelabelFileFormatlibs.labelFileLabelFileFormatKRu.
