@@ -1,0 +1,81 @@
+# Copyright 2021 The TensorFlow Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Lint as: python3
+"""Decoders configurations."""
+from typing import Optional, List, Mapping
+
+# Import libraries
+import dataclasses
+
+from official.modeling import hyperparams
+
+
+@dataclasses.dataclass
+class Identity(hyperparams.Config):
+  """Identity config."""
+  pass
+
+
+@dataclasses.dataclass
+class FPN(hyperparams.Config):
+  """FPN config."""
+  num_filters: int = 256
+  use_separable_conv: bool = False
+
+
+@dataclasses.dataclass
+class NASFPN(hyperparams.Config):
+  """NASFPN config."""
+  num_filters: int = 256
+  num_repeats: int = 5
+  use_separable_conv: bool = False
+
+
+@dataclasses.dataclass
+class ASPP(hyperparams.Config):
+  """ASPP config."""
+  level: int = 4
+  dilation_rates: List[int] = dataclasses.field(default_factory=list)
+  dropout_rate: float = 0.0
+  num_filters: int = 256
+  pool_kernel_size: Optional[List[int]] = None  # Use global average pooling.
+
+
+@dataclasses.dataclass
+class MRFM(hyperparams.Config):
+  fml_from_layer: List[str] = dataclasses.field(default_factory=list)
+  fml_layer_depth: List[int] = dataclasses.field(default_factory=list)
+  depth_multiplier: float = 1.0
+  min_depth: int = 16
+  insert_1x1_conv: bool = True
+  kernel_size: int = 3
+  use_explicit_padding: bool = False
+  use_depthwise: bool = False
+
+
+@dataclasses.dataclass
+class Decoder(hyperparams.OneOfConfig):
+  """Configuration for decoders.
+
+  Attributes:
+    type: 'str', type of decoder be used, one of the fields below.
+    fpn: fpn config.
+  """
+  type: Optional[str] = None
+  fpn: FPN = FPN()
+  nasfpn: NASFPN = NASFPN()
+  identity: Identity = Identity()
+  aspp: ASPP = ASPP()
+  mrfm: MRFM = MRFM()
